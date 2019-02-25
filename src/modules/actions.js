@@ -1,26 +1,33 @@
-export function addProduct(product){
+export function addProduct(product) {
   return {
-    type: 'ADD_PRODUCT',
+    type: "ADD_PRODUCT",
     product
-  }
+  };
 }
 
-export function checkout(){
+export function checkout() {
   return {
-    type: 'CHECKOUT'
-  }
+    type: "CHECKOUT"
+  };
 }
 
-export function removeOne(product){
+export function removeOne(product) {
   return {
-    type: 'REMOVE_ONE',
+    type: "REMOVE_ONE",
     product
-  }
+  };
 }
 
-export function removeAll(product){
+export function removeAll(product) {
   return {
-    type: 'REMOVE_ALL',
+    type: "REMOVE_ALL",
     product
-  }
+  };
+}
+
+export function getTotal(product) {
+  return {
+    type: "GET_TOTAL",
+    product
+  };
 }
