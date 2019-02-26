@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import ProductList from "./component/productList";
+import ShoppingList from "./component/shoppingList";
+import TotalPrice from "./component/totalPrice";
 import "./App.css";
 
 class App extends Component {
@@ -137,19 +140,9 @@ class App extends Component {
       );
     });
 
-    const buyProducts = products.map(product => {
-      return (
-        <button onClick={this.handleCheckout} name={product.id}>
-          Checkout
-        </button>
-      );
-    });
-
     const totalPrice = cart.map(item => item.price * item.inventory);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    // totalPrice.reduce((acc, cur) => acc + cur.Value,[]);
-    console.log(totalPrice);
-    //console.log("return render", cart);
+
     return (
       <div className="App">
         <div className="Component-container">
