@@ -1,7 +1,7 @@
 import React from "react";
 
 const ShoppingList = ({ products, cart, handleRemoveOne, handleRemoveAll }) => {
-  const cart = Object.values(this.props.cart);
+  cart = Object.values(this.props.cart);
   //console.log("render", this.props.cart);
 
   const shoppingList = cart.map(cart => {

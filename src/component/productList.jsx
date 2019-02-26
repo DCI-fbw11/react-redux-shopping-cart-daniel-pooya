@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductList = ({ products, cart, handleAdd }) => {
-  const products = Object.values(this.props.products);
+  products = Object.values(this.props.products);
   const productList = products.map(product => {
     return (
       <div key={product.id}>
