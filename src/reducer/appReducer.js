@@ -11,7 +11,7 @@ const appReducer = (state = {}, action) => {
         product.inventory > 0 ? product.inventory - 1 : product.inventory;
 
       const nextState = Object.assign({}, state);
-      nextState.products[id].inventory++;
+      nextState.products[id].inventory;
       nextState.cart[id] = product;
 
       return nextState;
@@ -29,7 +29,7 @@ const appReducer = (state = {}, action) => {
       newCart = { ...cart };
 
       if (cart[id].quantity > 1) {
-        newCart[id].quantity - 1;
+        return newCart[id].quantity - 1;
       } else {
         delete newCart[id];
       }
