@@ -9,7 +9,7 @@ class ShoppingListItem extends Component {
       <li key={item.id}>
         <p>
           Title: {item.title} | Price: ${item.price} | Inventory: x
-          {item.inventory}
+          {item.quantity}
         </p>
         <div>
           <button onClick={() => removeOne(item)}>Remove One</button>
